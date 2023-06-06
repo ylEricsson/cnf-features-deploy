@@ -75,7 +75,7 @@ RUN yum install -y numactl-devel make gcc && \
       cp hwlatdetect /hwlatdetect && \
       cp cyclictest /cyclictest
 
-FROM openshift/origin-base
+FROM quay.io/openshift/origin-base
 
 # python3 is needed for hwlatdetect
 RUN yum install -y lksctp-tools iproute libhugetlbfs-utils libhugetlbfs tmux ethtool iputils numactl-libs iptables kmod linuxptp iperf3 python3 nc iptables
