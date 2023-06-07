@@ -42,8 +42,6 @@ const (
 	defaultTestRuntime   = "300"
 	defaultMaxLatency    = -1
 	defaultTestCpus      = -1
-	defaultSampleWindow  = 1000000
-	defaultSampleWidth   = 950000
 	minCpuAmountForOslat = 2
 )
 
@@ -249,8 +247,6 @@ var _ = Describe("[performance] Latency Test", func() {
 
 			hwlatdetectArgs := []string{
 				fmt.Sprintf("-hardlimit=%d", hardLimit),
-				fmt.Sprintf("-window=%d", defaultSampleWindow),
-				fmt.Sprintf("-width=%d", defaultSampleWidth),
 				fmt.Sprintf("-duration=%s", latencyTestRuntime),
 			}
 
